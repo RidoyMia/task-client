@@ -47,8 +47,8 @@ const Update = () => {
                     </div>
                     <div className='lg:flex md:flex justify-center items-center align-middle gap-x-5'>
                     <select className=' px-5 w-full py-4 mt-4 bg-gray-300 rounded-2xl' {...register("priority")}>
-        <option value="High">High</option>
-        <option value="Law">Law</option>
+        <option value="High">high</option>
+        <option value="Law">Low</option>
         <option value="moderate">moderate</option>
       </select>
       <select className='w-full px-5  py-4 mt-4 bg-gray-300 rounded-2xl' {...register("process")}>

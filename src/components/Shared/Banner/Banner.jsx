@@ -1,5 +1,6 @@
 import React from 'react';
 import banner from "../../../assets/banner.png"
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -10,7 +11,7 @@ const Banner = () => {
                 <div className='py-20'>
                     <h1 className='text-lg lg:text-2xl xl:text-3xl md:text-xl font-semibold'>Your Ultimate Task Management <br></br> Solution</h1>
                     <p className='py-3'>Effortlessly manage tasks, enhance collaboration, and boost productivity with our intuitive TaskFlow system—your key to project success!</p>
-                    <button className='py-2 px-10  bg-green-800 text-white rounded-lg mt-5 '>Let’s Explore</button>
+                    <button className='py-2 px-10  bg-green-800 text-white rounded-lg mt-5 '><Link to="/dashboard">Let’s Explore</Link></button>
                 </div>
                 <div>
                     <img src={banner} className='w-full h-96'></img>
