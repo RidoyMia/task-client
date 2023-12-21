@@ -9,7 +9,7 @@ const DashboardLaout = () => {
   return (
     <div>
       <div className=' grid grid-cols-3 lg:grid-cols-5 md:grid-cols-5 '>
-        <div className=' col-span-0  bg-green-800 text-black'>
+        <div className=' col-span-0  h-[1200px] bg-green-800 text-black'>
           <div className='flex justify-center items-center align-middle mb-10'>
             <img src={user?.photoURL} className='w-24 h-24 rounded-full'></img>
           </div>
@@ -21,7 +21,7 @@ const DashboardLaout = () => {
               }
             >
               Dashboard
-            </NavLink><br></br>
+            </NavLink><br></br><br></br><br></br>
             <NavLink
               to="/dashboard/added"
               className={({ isActive, isPending }) =>
@@ -29,6 +29,23 @@ const DashboardLaout = () => {
               }
             >
               AddTask
+            </NavLink><br></br><br></br><br></br>
+            <NavLink
+              to="/dashboard/profile"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Profile
+            </NavLink>
+            <br></br><br></br><br></br>
+            <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Home
             </NavLink>
           </u>
         </div>

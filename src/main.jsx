@@ -14,6 +14,7 @@ import Alltask from './components/pages/Dashboard/AllTask/Alltask.jsx'
 import AddTask from './components/pages/Dashboard/AddTask/AddTask.jsx'
 import Update from './components/pages/Dashboard/Update/Update.jsx'
 import AuthRoute from './components/Shared/AuthRoute/AuthRoute.jsx'
+import Profile from './components/pages/Profile/Profile.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,6 +48,9 @@ const router = createBrowserRouter([
       },{
         path : 'updated/:id',
         element :<AuthRoute> <Update></Update></AuthRoute>
+      },{
+        path : 'profile',
+        element :<AuthRoute> <Profile></Profile></AuthRoute>
       }
     ]
   }
