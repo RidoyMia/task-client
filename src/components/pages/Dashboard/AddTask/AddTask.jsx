@@ -13,7 +13,8 @@ import axios from 'axios';
 const AddTask = () => {
     const navigate = useNavigate();
     const [loading,setLoading] = useState(false)
-    const {user} = useContext(authContext)
+    const {user} = useContext(authContext);
+    console.log(user,'githurbb');
     const { id } = useParams();
     const { register, handleSubmit, watch, formState: { errors }, } = useForm()
     const onSubmit = (data) => {

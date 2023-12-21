@@ -4,7 +4,7 @@ import { authContext } from '../../Provider/AuthContext';
 
 const Login = () => {
     const navigate = useNavigate()
-    const {user,setUser,createUser,loading,setLoading,googleLogin,signIn,logOut,updateProfileData} = useContext(authContext)
+    const {user,setUser,createUser,loading,setLoading,googleLogin,signIn,logOut,updateProfileData,githubLogin} = useContext(authContext)
     const handleLogin = e =>{
         e.preventDefault();
         const form = e.target;
@@ -21,6 +21,14 @@ const Login = () => {
     }
     const handleGoole = ()=>{
         googleLogin().then(res=>{
+            
+            if(res){
+                navigate('/dashboard')
+            }
+        })
+    }
+    const handleGithub = ()=>{
+        githubLogin().then(res=>{
             
             if(res){
                 navigate('/dashboard')
@@ -59,6 +67,9 @@ const Login = () => {
                     </div>
                   <div className=' flex justify-center'>
                   <button className='py-2 px-10 bg-green-700 text-white rounded-lg' onClick={handleGoole}>Google</button>
+                  </div>
+                  <div className=' flex justify-center mt-3'>
+                  <button className='py-2 px-10 bg-green-700 text-white rounded-lg' onClick={handleGithub}>Github</button>
                   </div>
                 </div>
             </div>
